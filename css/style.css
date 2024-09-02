@@ -1,0 +1,336 @@
+
+nav{
+  background-color: rgba(0, 0, 0,0.5);
+}
+.nav-item .nav-link {
+  transition: .3s;
+  opacity: 0;
+  animation: slideTop .5s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+.nav-item:hover .nav-link{
+  color: #4152ee !important;
+}
+.navbar-brand {
+  animation-name: slideRight;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  
+}
+.navbar-brand:hover{
+  transform: scale(1.1) !important;
+}
+
+/*Global Components*/
+.main-heading{
+  margin-bottom: 3rem;
+}
+.main-heading h2{
+  font-size: 3rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.main-heading .line{
+  width: 50px;
+  height: 3px;
+  background-color: blue;
+  margin: 0 auto;
+}
+
+/*end*/
+
+/*Landing*/
+
+.landing{
+  background-image: url('../images/intro-bg.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-attachment:fixed ;  
+}
+.landing h1{
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+/*End Landing*/
+
+/*start about me*/
+
+.about-right h2::after{
+position: absolute;
+content: '';
+height: 3px;
+width: 80px;
+background-color: blue;
+bottom: -5px;
+left: 0;
+}
+.about-left h2::after{
+  position: absolute;
+content: '';
+height: 3px;
+width: 80px;
+background-color: blue;
+bottom: -5px;
+left: 0;
+
+}
+/*end*/
+
+/*services*/
+
+.services-item:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.services-item span{
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 10px solid blue;
+  margin: 0 auto;
+  transition: 0.5s background-color,0.5s border;
+}
+.services-item span i{
+  font-size: 1.5rem;
+  transition: 0.5s color;
+}
+.services-item:hover span{
+  background-color: blue;
+  border: 10px solid #CDE1F8;
+  
+}
+.services-item:hover i{
+  color: white;
+}
+/* Achievments */
+.acchievments {
+  background-image: url("../images/counters-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  
+}
+.acchievments::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: #4152ee99;
+    
+}
+.acchievments .item-icon {
+    width: 100px;
+    height: 100px;
+    border: 8px solid #dae3ee;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+  }
+  .acchievments .item-icon i {
+    font-size: 28px;
+    color: #dae3ee;
+  }
+/* End Achievments*/
+
+/* Portfoilo */
+.portfoilo .item img{
+    transition:1s transform;
+}
+.portfoilo .item:hover img{
+    transform: scale(1.2);
+}
+/* End portfoilo */
+
+
+/* testimonials */
+.testimonials{
+  padding: 5rem 0;
+  background-image:url('../images/overlay-bg.jpg');
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+.overlay{
+  position: absolute;
+  inset: 0;
+  background-color: rgba(5, 41, 244, 0.43);
+}
+.carousel-indicators {
+  bottom: -30px !important;
+}
+/* End testimonials */
+
+/* Blog */
+.card-footer img{
+  width: 30px;
+  height: 30px;
+}
+.card-specific{
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Blog .card img{
+  transition:1s transform;
+}
+.Blog .card:hover img{
+  transform:scaleY(1.1)
+}
+.card-body .card-specific:hover{
+background-color:#0b84fe!important;
+}
+/* End Blog */
+.top{
+  position: fixed;
+  bottom: 2.1rem;
+  right: 2.1rem;
+
+}
+.top i{
+  color: #fff;
+  background-color: blue;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+
+}
+
+.top i:hover{
+  transform: scale(1.01);
+  box-shadow: 0 0 3px blue, 0 0 15px blue;
+}
+button:hover{
+  transform: scale(1.1);
+}
+/*start footer*/
+
+.footer {
+  background-color: #0b84fe;
+  padding: 20px 0;
+  color: white;
+}
+
+.footer p {
+  margin: 0;
+  padding: 5px;
+}
+
+.footer .social-links {
+  margin: 10px 0;
+}
+
+.footer .social-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 24px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #4152ee;
+}
+
+.footer p a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer p a:hover {
+  color: #4152ee;
+}
+/*end footer*/
+
+@keyframes slideRight{
+  0%{
+    transform: translateX(-100px);
+    opacity: 0;
+}
+100%{
+    transform: translateX(0px);
+    opacity: 1;
+}
+}
+@keyframes slideTop{
+  0%{
+    transform: translateX(100px);
+    opacity: 0;
+}
+100%{
+    transform: translateX(0px);
+    opacity: 1;
+}
+}
+/* CSS Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate__animated {
+  opacity: 0; /* Start hidden */
+  transition: opacity 2s ease-out;
+}
+
+.animate__visible {
+  opacity: 1;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-9-2 18:41:31
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-in-left
+ * ----------------------------------------
+ */
+/* @-webkit-keyframes scale-in-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-left {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    opacity: 1;
+  }
+} */
